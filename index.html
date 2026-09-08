@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2CZAI | Semi-Anarchy AI Infrastructure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">2CZAI</div>
+    <div class="nav-links">
+      <a href="#rules">Rules</a>
+      <a href="#info">System Info</a>
+      <a href="https://discord.gg/your-link" target="_blank">Discord</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1 class="hero-title">2CZAI</h1>
+    <p class="hero-tagline">Pure Survival. Loose Constraints. No Handouts.</p>
+
+    <!-- Copyable Endpoint Widget -->
+    <div class="endpoint-box" id="endpointBox" onclick="copyEndpoint()">
+      <span class="endpoint-text">api.2czai.com</span>
+      <span class="copy-hint" id="copyHint">Click to copy</span>
+    </div>
+
+    <div class="status-badge">
+      <span class="status-dot"></span> Active Instances: <strong id="nodeCount">0</strong>
+    </div>
+  </header>
+
+  <!-- Section 1: Rules -->
+  <section id="rules" class="section">
+    <h2 class="section-title">The Rules</h2>
+    <p class="section-subtitle">This is semi-anarchy compute. Staff won't ban you, but the system will correct you.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>No Lockup Machines</h3>
+        <p>Do not intentionally kill node performance or exhaust GPU memory with infinite loop exploit payload calls.</p>
+      </div>
+      <div class="card">
+        <h3>No Unbounded Workloads</h3>
+        <p>Keep your automated agent pipelines within reasonable token and compute limits.</p>
+      </div>
+      <div class="card">
+        <h3>The Punishment</h3>
+        <p>If you break these rules, your agent job or rogue script will be ruthlessly terminated by system administration.</p>
+      </div>
+      <div class="card">
+        <h3>No Bans</h3>
+        <p>No one gets banned, and no one gets in trouble. Figure it out in execution.</p>
+      </div>
+    </div>
+
+    <div class="banner-text">ANARCHY FOREVER</div>
+  </section>
+
+  <!-- Section 2: System Info -->
+  <section id="info" class="section">
+    <h2 class="section-title">System Info</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Hardware</h3>
+        <p>Hosted on high-performance GPU nodes for maximum TPS and low-latency inference.</p>
+      </div>
+      <div class="card">
+        <h3>Environment</h3>
+        <p>A massive, unforgiving system. No rate-limit handholding, no artificial restrictions, and raw API access.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function copyEndpoint() {
+      const endpoint = "api.2czai.com";
+      navigator.clipboard.writeText(endpoint);
+      const hint = document.getElementById("copyHint");
+      hint.innerText = "Copied!";
+      setTimeout(() => {
+        hint.innerText = "Click to copy";
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
